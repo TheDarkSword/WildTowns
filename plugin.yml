@@ -1,0 +1,5 @@
+name: WildTowns
+main: com.gmail.filoghost.wildtowns.WildTowns
+version: 1.0
+
+softdepend: [WildCommons, Vault, WorldGuard, Essentials, dynmap]

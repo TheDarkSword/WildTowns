@@ -1,0 +1,12 @@
+Molti riferimenti sono duplicati, per motivi di performance, e vanno modificati a coppie.
+Ad esempio nell'associazione Town <-> Plot, esiste un campo Town.plot e uno Plot.town.
+
+Controllare il più possibile la consistenza di questi riferimenti duplicati dopo le operazione
+di modifica sulle associazioni tra città, plot e residenti.
+Vedi esempi in WTManager#consistencyCheck.
+
+Di solito si modifica prima il riferimento "forte" (ad esempio Town.residentsMap) rispetto a 
+quello più "debole" (Resident.town). Resident.town ad esempio è quello debole perché se ne
+potrebbe fare a meno.
+
+I residenti vengono caricati tutti all'inizio, occupano poca memoria.
